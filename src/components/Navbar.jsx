@@ -2,15 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import  { Link } from 'react-router-dom'
 
-
-
-
-
-
 export default function Navbar(props) {
-
-
-
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
@@ -28,9 +20,6 @@ export default function Navbar(props) {
                 <Link className="nav-link" to="/about">{props.aboutText}</Link>
               </li>
              </ul>
-
-             
-             
 
             <div className={`form-check text-${props.mode === 'light' ? 'dark' : 'light'} `}>
               <input className="form-check-input" onClick={props.toggleMode2} type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="option1"  onChange={e => {}}/>
@@ -53,19 +42,14 @@ export default function Navbar(props) {
               </div>
             </div>
 
-
                  <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
                   <input className="form-check-input" onClick={props.toggleMode1} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                   <label className="form-check-label" htmlFor="felxSwitchCheckDefault"> Enable Dark Mode</label>
                 </div>
           </div>
         </div>
-
       </nav>
-
-
-
-    </>
+   </>
   );
 }
 
