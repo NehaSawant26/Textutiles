@@ -1,7 +1,5 @@
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import About from './components/About'
@@ -14,13 +12,8 @@ import {
   Link
 } from "react-router-dom";
 
-
-
-import React from 'react'
-
  function App() {
   const [mode, setMode] = useState('light');
-
   const [alert, setAlert] = useState(null);
 
   const showAlert =(message, type) =>{
@@ -42,8 +35,7 @@ import React from 'react'
       setMode('light') 
       document.body.style.backgroundColor = 'white'
       showAlert("Light mode has been enabled" , "success")
-    }
-    
+    }   
   } 
 
   const toggleMode1 =()=>{
@@ -56,11 +48,9 @@ import React from 'react'
       setMode('light') 
       document.body.style.backgroundColor = 'white'
       showAlert("Light mode has been enabled" , "success")
-    }
-    
+    }    
   } 
   
-
   const toggleMode2 =()=>{
     document.body.style.backgroundColor = '#106845'
       showAlert("Green coloured dark mode has been enabled" , "success")
@@ -76,8 +66,6 @@ import React from 'react'
     showAlert("Violet coloured dark mode has been enabled" , "success")
   }
 
-
-
   return (
    <>
       <Router>
@@ -85,13 +73,9 @@ import React from 'react'
       <Alert alert={alert}/>
       <div className="container">
       <Routes>
-          <Route exact path="/about" element={<About mode={mode} togglemode={togglemode}/>} / >
-            
-          <Route exact path="/" element={<TextForm showAlert={showAlert} heading ="Enter your text" mode={mode}/> }/>
-          
+          <Route exact path="/about" element={<About mode={mode} togglemode={togglemode}/>} / >    
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading ="Enter your text" mode={mode}/> }/>  
       </Routes>
-    
-     
      </div>
      </Router>
      </>
