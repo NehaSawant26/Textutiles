@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://NehaSawant26.github.io/Textutiles",
+  "homepage": "https://nehasawant26.github.io/Textutiles",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
